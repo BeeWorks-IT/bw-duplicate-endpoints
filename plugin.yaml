@@ -1,0 +1,22 @@
+name: bw-duplicate-endpoints
+label: Hermes Duplicate Settings
+version: 1.0.0
+description: >-
+  Duplicate custom OpenAI-compatible endpoints between Hermes profiles from a
+  guided Desktop settings page (Settings > Plugins > Duplicate Custom Endpoints). Pick a
+  source profile, select endpoints, choose target profiles, and copy them with
+  or without their API keys — or create one new endpoint on several profiles at
+  once from a single form. Every run is confirmed up front, validated, and
+  verified by reading the target back. Writes go through Hermes' own dashboard
+  endpoint handlers, so config.yaml and .env stay exactly as Settings would
+  leave them. No agent tools, no hooks, no telemetry.
+author: BeeWorks (Youssef El Hirech)
+license: MIT
+homepage: https://github.com/BeeWorks-IT/bw-duplicate-endpoints
+requires_hermes: ">=0.23.0"
+tags: [desktop, providers, profiles, endpoints]
+# UI plugin: dashboard/plugin_api.py serves /api/plugins/bw-duplicate-endpoints/
+# and desktop/plugin.js renders the settings page. register() registers no tools
+# or hooks on the agent side.
+provides_tools: []
+provides_hooks: []

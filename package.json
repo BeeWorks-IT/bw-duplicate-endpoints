@@ -1,0 +1,17 @@
+{
+  "name": "bw-duplicate-endpoints",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Build and test tooling for the BeeWorks Duplicate Endpoints Desktop plugin. Runtime React and SDK components are supplied by the host.",
+  "scripts": {
+    "check": "node --input-type=module --check < desktop/plugin.js",
+    "test": "esbuild tests/desktop-entry.mjs --bundle --format=esm --platform=node --external:react --external:react/jsx-runtime --alias:@hermes/plugin-sdk=./tests/desktop-sdk-shim.mjs --outfile=node_modules/.bw-duplicate-endpoints-desktop-test.mjs && node --test --experimental-test-isolation=none tests/desktop.test.mjs",
+    "test:py": "python -m pytest -q"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "jsdom": "^27.4.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

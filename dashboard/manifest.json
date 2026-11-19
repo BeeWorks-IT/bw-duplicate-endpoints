@@ -1,0 +1,7 @@
+{
+  "name": "bw-duplicate-endpoints",
+  "label": "Hermes Duplicate Settings",
+  "description": "Duplicate custom OpenAI-compatible endpoints between Hermes profiles, with or without API keys, with validation and read-back verification.",
+  "version": "1.0.0",
+  "api": "plugin_api.py"
+}
